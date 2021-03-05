@@ -19,11 +19,7 @@ export default function ProductDetail() {
       setProduct(productDetail);
     })
   }, []);
-
-  function handleAddProductsToCart(item) {
-    console.log(item)
-  }
-
+  
   return (
     <div className="container">
       <Header addToCart={addToCart}/>

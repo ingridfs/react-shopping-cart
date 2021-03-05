@@ -12,6 +12,12 @@
   flex: 1;
   justify-content: center;
   text-align: center;
+  text-decoration: none;
+  color: #000
+}
+
+.brand:hover {
+  cursor: pointer;
 }
 
 .cart {
