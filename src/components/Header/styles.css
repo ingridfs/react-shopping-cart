@@ -1,0 +1,40 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-family: 'Roboto';
+  font-weight: 700;
+  height: 100px;
+  width: 90%;
+}
+
+.brand {
+  flex: 1;
+  justify-content: center;
+  text-align: center;
+}
+
+.cart {
+  justify-self: flex-end;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.cart-badge {
+  position: absolute;
+  top: 0px;
+  right: 7px;
+  background-color: #f35549;
+  color: #fff;
+  font-weight: 400;
+  border-radius: 100%;
+  width: 17px;
+  height: 17px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 13px;
+}

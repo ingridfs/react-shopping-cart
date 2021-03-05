@@ -1,4 +1,5 @@
 import React from 'react';
+import Header from '../../components/Header';
 import ProductsList from '../../components/ProductsList';
 
 import './styles.css';
@@ -6,9 +7,7 @@ import './styles.css';
 export default function Home() {
   return (
     <div className="container">
-      <header>
-          <h1 className="page-title">Home page</h1>
-      </header>
+      <Header />
       <main>
         <ProductsList />
       </main>
