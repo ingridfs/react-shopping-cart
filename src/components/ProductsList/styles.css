@@ -1,0 +1,17 @@
+
+.product-list {
+  display: grid;
+  justify-content: space-around;
+  font-weight: 400;
+  grid-template-columns: repeat(auto-fill, minmax(200px, auto));
+  grid-gap: 20px;
+}
+
+.product-list-item  {
+  background-color: #eeeeee;
+  height: 200px;
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
