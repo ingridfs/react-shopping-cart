@@ -1,17 +1,36 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 import './styles.css';
 
+const BASE_URL = "https://api-desafio-front.justdigital.com.br/";
+
 export default function ProductsList() {
 
+  const [productList, setProductList] = useState([]);
+
+  useEffect(() => {
+    fetch(BASE_URL)
+    .then(response => response.json())
+    .then(json => {
+      const { products } = json;
+      setProductList(Array(...products))
+    })
+  }, []);
 
   return (
     <div className="product-list">
-      <div className="product-list-item">product name 1</div>
-      <div className="product-list-item">product name 2</div>
-      <div className="product-list-item">product name 3</div>
-      <div className="product-list-item">product name 4</div>
-      <div className="product-list-item">product name 5</div>
+       {productList.map( item => {
+         return (
+          <div key={item.id} className="product-list-item">
+            <img className="product-image" src={item.picture} alt={item.title}/>
+            <p className="product-text"> {item.title}</p>
+            <span className="product-price">R${item.price}</span>
+            <div className="product-buttons">
+              <button>Adicionar ao Carrinho</button>
+            </div>
+          </div>
+         )
+      })} 
     </div>
   );
 }

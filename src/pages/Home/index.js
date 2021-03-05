@@ -6,8 +6,12 @@ import './styles.css';
 export default function Home() {
   return (
     <div className="container">
-      <h1 className="page-title">Home page</h1>
-      <ProductsList />
+      <header>
+          <h1 className="page-title">Home page</h1>
+      </header>
+      <main>
+        <ProductsList />
+      </main>
     </div>
   );
 }
