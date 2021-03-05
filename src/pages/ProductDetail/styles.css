@@ -12,13 +12,22 @@
   justify-content: space-between;
   margin: 30px 0;
 }
-.product-details .description img {
+
+.product-details .description .description-image {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.product-details .description .description-image img {
   width: auto;
   height: 100%;
 }
+
 .product-details .description .description-text {
   max-width: 70%;
 }
+
 .product-details .description .description-text button{
   background-color: #f35549;
   outline: none;

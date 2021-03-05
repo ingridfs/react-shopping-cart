@@ -26,7 +26,9 @@ export default function ProductDetail() {
       <main>
         <div className="product-details">
           <div className="description">
-            <img src={product.picture} alt={product.title}/>
+            <div className="description-image">
+              <img src={product.picture} alt={product.title}/>
+            </div>
             <div className="description-text">
               <h2>{product.title}</h2>
               <h2>R${product.price}</h2>

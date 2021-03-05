@@ -32,7 +32,7 @@ export default function ProductsList() {
           {productList.map( item => {
             return (
               <div key={item.id} className="product-list-item" >
-                <div onClick={() => handleProductClick(item.id)}>
+                <div className="product-info" onClick={() => handleProductClick(item.id)}>
                   <img className="product-image" src={item.picture} alt={item.title}/>
                   <p className="product-text"> {item.title}</p>
                   <span className="product-price">R${item.price}</span>
