@@ -1,6 +1,5 @@
 import React from 'react';
 import ProductsList from '../../components/ProductsList';
-import ProductDetail from '../ProductDetail';
 
 import './styles.css';
 
@@ -12,7 +11,6 @@ export default function Home() {
       </header>
       <main>
         <ProductsList />
-        <ProductDetail />
       </main>
     </div>
   );

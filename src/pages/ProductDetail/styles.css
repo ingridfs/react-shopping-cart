@@ -1,0 +1,41 @@
+.product-details {
+  width: 100%;
+  margin: 15px auto;
+  max-width: 900px;
+  height: 100%;
+  padding: 15px;
+  font-weight: 400;
+}
+
+.product-details .description {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 0;
+}
+.product-details .description img {
+  width: auto;
+  height: 100%;
+}
+.product-details .description .description-text {
+  max-width: 70%;
+}
+.product-details .description .description-text button{
+  background-color: #f35549;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  height: 40px;
+  margin: 20px auto;
+  border-radius: 5px;
+  color: #FFF;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+.product-details .description .description-text button:hover {
+  box-shadow: 0px 0px 5px 3px #e0e0e0;
+}
+
+.product-details .info {
+  flex: 2;
+}
