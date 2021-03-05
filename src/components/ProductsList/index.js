@@ -1,27 +1,29 @@
 import React, { useEffect, useState } from 'react';
+import api from '../../services/api';
 
 import './styles.css';
-
-const BASE_URL = "https://api-desafio-front.justdigital.com.br/";
 
 export default function ProductsList() {
 
   const [productList, setProductList] = useState([]);
 
   useEffect(() => {
-    fetch(BASE_URL)
-    .then(response => response.json())
-    .then(json => {
-      const { products } = json;
-      setProductList(Array(...products))
+    api.get('').then( response => {
+      const { products } = response.data;
+      console.log(products)
+      setProductList(products)
     })
   }, []);
+
+  function handleProductClick(item) {
+
+  }
 
   return (
     <div className="product-list">
        {productList.map( item => {
          return (
-          <div key={item.id} className="product-list-item">
+          <div key={item.id} className="product-list-item" onClick={handleProductClick(item)}>
             <img className="product-image" src={item.picture} alt={item.title}/>
             <p className="product-text"> {item.title}</p>
             <span className="product-price">R${item.price}</span>
@@ -30,7 +32,7 @@ export default function ProductsList() {
             </div>
           </div>
          )
-      })} 
+      })}  
     </div>
   );
 }
